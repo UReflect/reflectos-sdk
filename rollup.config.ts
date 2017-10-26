@@ -5,7 +5,7 @@ import camelCase from 'lodash.camelcase'
 
 const pkg = require('./package.json')
 
-const libraryName = 'ureflect-sdk'
+const libraryName = 'reflectos-sdk'
 
 export default {
   input: `compiled/${libraryName}.js`,

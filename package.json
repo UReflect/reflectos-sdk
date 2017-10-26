@@ -3,13 +3,13 @@
   "version": "0.0.0-development",
   "description": "",
   "keywords": [],
-  "main": "dist/ureflect-sdk.umd.js",
-  "module": "dist/ureflect-sdk.es5.js",
-  "typings": "dist/types/ureflect-sdk.d.ts",
+  "main": "dist/reflectos-sdk.umd.js",
+  "module": "dist/reflectos-sdk.es5.js",
+  "typings": "dist/types/reflectos-sdk.d.ts",
   "files": [
     "dist"
   ],
-  "author": "Jean BARRIERE <jean.barriere@epitech.eu>",
+  "author": "Jean BARRIERE <jean@ureflect.io>",
   "repository": {
     "type": "git",
     "url": "https://github.com/UReflect/reflectos-sdk"
@@ -33,7 +33,9 @@
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
     "prepush": "npm run test:prod && npm run build",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "add": "all-contributors add",
+    "generate": "all-contributors generate"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -78,6 +80,7 @@
   "devDependencies": {
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
+    "all-contributors-cli": "^4.5.1",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
