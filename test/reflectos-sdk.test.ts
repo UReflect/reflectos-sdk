@@ -1,14 +1,24 @@
-import DummyClass from '../src/reflectos-sdk'
+import HelloWorld from '../src/reflectos-sdk'
 
 /**
- * Dummy test
+ * HelloWorld
  */
-describe('Dummy test', () => {
-  it('works if true is truthy', () => {
-    expect(true).toBeTruthy()
+describe('HelloWorld test', () => {
+  set('hello', () => new HelloWorld())
+
+  it('HelloWorld is instantiable', () => {
+    expect(hello).toBeInstanceOf(HelloWorld)
   })
 
-  it('DummyClass is instantiable', () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
+  it('HelloWorld can say hello', () => {
+    expect(() => hello.sayHello()).toConsoleLog()
+  })
+
+  it('HelloWorld can say hello and return 0', () => {
+    expect(hello.sayHello()).toBe(0)
+  })
+
+  it('HelloWorld can say goodbye', () => {
+    expect(() => hello.sayGoodbye()).toConsoleLog()
   })
 })

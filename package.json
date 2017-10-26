@@ -1,6 +1,6 @@
 {
   "name": "reflectos-sdk",
-  "version": "0.0.0-development",
+  "version": "0.0.1-development",
   "description": "",
   "keywords": [],
   "main": "dist/reflectos-sdk.umd.js",
@@ -56,6 +56,7 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
+    "setupTestFrameworkScriptFile": "<rootDir>/.jest-plugins.js",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": [
       "ts",
@@ -64,7 +65,8 @@
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "/test/"
+      "/test/",
+      ".jest-plugins.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -88,6 +90,9 @@
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
     "jest": "^21.0.0",
+    "jest-plugin-console-matchers": "^2.5.0",
+    "jest-plugin-set": "^2.5.0",
+    "jest-plugins": "^2.5.0",
     "lint-staged": "^4.0.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
