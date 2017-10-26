@@ -1,7 +1,8 @@
 # reflectos-sdk : uReflect SDK
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#credits)
-[![Coverage Status](https://coveralls.io/repos/github/UReflect/ureflect-sdk/badge.svg?branch=master)](https://coveralls.io/github/UReflect/ureflect-sdk?branch=master)
+[![Coverage 
+Status](https://coveralls.io/repos/github/UReflect/reflectos-sdk/badge.svg)](https://coveralls.io/github/UReflect/reflectos-sdk)
 [![Build Status](https://travis-ci.org/UReflect/reflectos-sdk.svg)](https://travis-ci.org/UReflect/reflectos-sdk)
 
 SDK for uReflect project that makes possible interactions between the Core and uReflect ecosystem
