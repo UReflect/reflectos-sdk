@@ -1,6 +1,6 @@
 # reflectos-sdk : uReflect SDK
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#credits)
 [![Coverage Status](https://coveralls.io/repos/github/UReflect/ureflect-sdk/badge.svg?branch=master)](https://coveralls.io/github/UReflect/ureflect-sdk?branch=master)
 [![Build Status](https://travis-ci.org/UReflect/reflectos-sdk.svg)](https://travis-ci.org/UReflect/reflectos-sdk)
 
