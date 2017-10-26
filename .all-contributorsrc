@@ -1,0 +1,38 @@
+{
+  "projectName": "reflectos-sdk",
+  "projectOwner": "UReflect",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "JeanBarriere",
+      "name": "Jean Barrière",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11390722?v=4",
+      "profile": "http://www.jean-barriere.fr/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Albanbin",
+      "name": "Alban Combaud",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/22745197?v=4",
+      "profile": "http://albancombaud.xyz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Arinono",
+      "name": "Aurélien ARINO",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10957531?v=4",
+      "profile": "https://github.com/Arinono",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
