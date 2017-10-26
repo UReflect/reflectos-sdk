@@ -3,13 +3,22 @@
 // ...
 
 export default class HelloWorld {
-  constructor() {}
+  stuff: string
+
+  constructor(stuff: string) {
+    this.stuff = stuff
+  }
 
   sayHello() {
     console.log('hi')
     return 0
   }
+
   sayGoodbye() {
     console.log('goodbye')
+  }
+
+  getStuff() {
+    return this.stuff
   }
 }

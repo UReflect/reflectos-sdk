@@ -4,7 +4,7 @@ import HelloWorld from '../src/reflectos-sdk'
  * HelloWorld
  */
 describe('HelloWorld test', () => {
-  set('hello', () => new HelloWorld())
+  set('hello', () => new HelloWorld('hello'))
 
   it('HelloWorld is instantiable', () => {
     expect(hello).toBeInstanceOf(HelloWorld)
@@ -20,5 +20,9 @@ describe('HelloWorld test', () => {
 
   it('HelloWorld can say goodbye', () => {
     expect(() => hello.sayGoodbye()).toConsoleLog()
+  })
+
+  it('HelloWorld stuff is hello', () => {
+    expect(hello.getStuff()).toBe('hello')
   })
 })
