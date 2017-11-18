@@ -26,6 +26,7 @@ export default class CacheManager {
 
     var exists = fs.existsSync(self.filePath)
 
+    var obj: any
     if (exists) {
       var data = fs.readFileSync(self.filePath, 'utf8')
       obj = JSON.parse(data) //now it an object
@@ -33,7 +34,7 @@ export default class CacheManager {
       json = JSON.stringify(obj) //convert it back to json
       fs.writeFileSync(self.filePath, json, 'utf8') // write it back
     } else {
-      var obj = {}
+      obj = {}
       obj[name] = value
       var json = JSON.stringify(obj)
       fs.writeFileSync(self.filePath, json, 'utf8')
@@ -53,6 +54,7 @@ export default class CacheManager {
     }
 
     var data = fs.readFileSync(this.filePath, 'utf8')
+    var obj: any
     obj = JSON.parse(data) //now it an object
     if (obj[name] === undefined) return null
     return obj[name]

@@ -8,7 +8,7 @@ export class Calendar {
   }
 
   getDayEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    var arr_tmp: any = []
     this.events.forEach(function(ev) {
       if (date.getDay() == ev.getDate().getDay()) {
         arr_tmp.push(ev)
@@ -18,7 +18,7 @@ export class Calendar {
   }
 
   getMonthEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    var arr_tmp: any = []
     this.events.forEach(function(ev) {
       if (date.getMonth() == ev.getDate().getMonth()) {
         arr_tmp.push(ev)
@@ -28,9 +28,9 @@ export class Calendar {
   }
 
   getYearEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    var arr_tmp: any = []
     this.events.forEach(function(ev) {
-      if (date.getYear() == ev.getDate().getYear()) {
+      if (date.getFullYear() == ev.getDate().getFullYear()) {
         arr_tmp.push(ev)
       }
     })

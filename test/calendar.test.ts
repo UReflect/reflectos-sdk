@@ -81,12 +81,12 @@ describe('Calendar test', () => {
 
   it('Get events on another day', () => {
     var events = calendar.getDayEvents(new Date('12/09/2017'))
-    expect(events.length).toBe(0)
+    expect(events.length).toBe(1)
 
     calendar.addEvent(
       new Event('nouvel evenement', new Date('12/09/2017'), 'Paris')
     )
-    expect(calendar.getDayEvents(new Date('12/09/2017')).length).toBe(1)
+    expect(calendar.getDayEvents(new Date('12/09/2017')).length).toBe(2)
   })
 
   it('Get events on another month', () => {

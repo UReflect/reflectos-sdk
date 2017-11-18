@@ -1,4 +1,4 @@
-import CacheManager from '../src/CacheManager'
+import CacheManager from '../src/cacheManager'
 
 var fs = require('fs')
 var path = '/tmp/UR/cache/Cache1-test'

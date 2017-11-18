@@ -3,9 +3,9 @@ export default class Timer {
   private timeout: number
   private interval: number
   private seconds: number = 0
-  private timerId: number = 0
+  private timerId: any
   private running: boolean = false
-  private timeoutId: number = 0
+  private timeoutId: any
   private startDate: Date
 
   constructor(timeout: number, interval: number, callback_end: () => void) {
@@ -14,7 +14,7 @@ export default class Timer {
     this.callback_end = callback_end
   }
 
-  start(callback) {
+  start(callback: Function) {
     if (this.running == false) {
       this.running = true
       this.startDate = new Date()
@@ -38,12 +38,12 @@ export default class Timer {
   pause() {
     clearInterval(this.timerId)
     clearTimeout(this.timeoutId)
-    this.seconds = (new Date() - this.startDate) / 1000
+    this.seconds = (Date.now() - this.startDate.getTime()) / 1000
     this.running = false
     return this.seconds
   }
 
-  restart(callback) {
+  restart(callback: Function) {
     if (this.running == true) {
       clearInterval(this.timerId)
       clearTimeout(this.timeoutId)

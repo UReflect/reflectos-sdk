@@ -2,20 +2,21 @@ import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
+import multiEntry from 'rollup-plugin-multi-entry'
 
-const pkg = require('./package.json')
+import * as pkg from './package.json'
 
 const libraryName = 'reflectos-sdk'
 
 export default {
-  input: `compiled/${libraryName}.js`,
+  input: 'compiled/**.js',
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
     { file: pkg.module, format: 'es' },
   ],
   sourcemap: true,
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [],
+  external: ['fs'],
   watch: {
     include: 'compiled/**',
   },
@@ -29,5 +30,7 @@ export default {
 
     // Resolve source maps to the original source
     sourceMaps(),
+
+    multiEntry()
   ],
 }
