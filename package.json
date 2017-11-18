@@ -80,7 +80,7 @@
     "mapCoverage": true
   },
   "devDependencies": {
-    "@types/jest": "^21.1.0",
+    "@types/jest": "^21.1.6",
     "@types/node": "^8.0.0",
     "all-contributors-cli": "^4.5.1",
     "colors": "^1.1.2",
@@ -89,28 +89,31 @@
     "cross-env": "^5.0.1",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
-    "jest": "^21.0.0",
-    "jest-plugin-console-matchers": "^2.5.0",
-    "jest-plugin-set": "^2.5.0",
-    "jest-plugins": "^2.5.0",
-    "lint-staged": "^4.0.0",
+    "jest": "^21.2.1",
+    "jest-plugin-console-matchers": "^2.6.0",
+    "jest-plugin-set": "^2.6.0",
+    "jest-plugins": "^2.6.0",
+    "lint-staged": "^5.0.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.4.4",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.50.0",
+    "rollup": "^0.51.7",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "semantic-release": "^8.2.0",
-    "ts-jest": "^21.0.0",
+    "ts-jest": "^21.2.3",
     "ts-node": "^3.0.6",
     "tslint": "^5.4.3",
     "tslint-config-prettier": "^1.1.0",
-    "tslint-config-standard": "^6.0.0",
+    "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.9.0",
     "typescript": "^2.3.4",
     "validate-commit-msg": "^2.12.2"
+  },
+  "dependencies": {
+    "node-cache": "^4.1.1"
   }
 }
