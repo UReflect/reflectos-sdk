@@ -1,3 +1,1 @@
-export default class Mike {
-  constructor() {}
-}
+export default class Mike {}

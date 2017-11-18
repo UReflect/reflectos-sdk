@@ -1,40 +1,38 @@
 export class Calendar {
   events: Event[] = []
 
-  constructor() {}
-
   addEvent(event: Event) {
     this.events.push(event)
   }
 
   getDayEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
-      if (date.getDay() == ev.getDate().getDay()) {
-        arr_tmp.push(ev)
+      if (date.getDay() === ev.getDate().getDay()) {
+        arrTmp.push(ev)
       }
     })
-    return arr_tmp
+    return arrTmp
   }
 
   getMonthEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
-      if (date.getMonth() == ev.getDate().getMonth()) {
-        arr_tmp.push(ev)
+      if (date.getMonth() === ev.getDate().getMonth()) {
+        arrTmp.push(ev)
       }
     })
-    return arr_tmp
+    return arrTmp
   }
 
   getYearEvents(date: Date = new Date()) {
-    var arr_tmp = []
+    let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
-      if (date.getYear() == ev.getDate().getYear()) {
-        arr_tmp.push(ev)
+      if (date.getFullYear() === ev.getDate().getFullYear()) {
+        arrTmp.push(ev)
       }
     })
-    return arr_tmp
+    return arrTmp
   }
 
   getEvents() {
@@ -46,7 +44,7 @@ export class Calendar {
   }
 
   removeEvent(event: Event) {
-    var index = this.events.indexOf(event)
+    let index = this.events.indexOf(event)
     if (index > -1) {
       this.events.splice(index, 1)
       return 0

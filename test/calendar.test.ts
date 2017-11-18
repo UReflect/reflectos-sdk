@@ -1,5 +1,4 @@
-import { Calendar } from '../src/calendar'
-import { Event } from '../src/calendar'
+import { Calendar, Event } from '../src/calendar'
 
 /**
  * HelloWorld
@@ -26,7 +25,7 @@ describe('Calendar test', () => {
   it('Event can be add', () => {
     expect(calendar.getEventsNumber()).toBe(1)
 
-    var events = calendar.getEvents()
+    let events = calendar.getEvents()
 
     events.forEach(function(ev) {
       expect(ev.getName()).toBe(name)
@@ -44,13 +43,13 @@ describe('Calendar test', () => {
   })
 
   it('Trying to remove non existing event', () => {
-    var event = new Event(name, new Date(), place, description)
+    let event = new Event(name, new Date(), place, description)
 
     expect(calendar.removeEvent(event)).toBe(-1)
   })
 
   it("Trying to re set event's informations", () => {
-    var events = calendar.getEvents()
+    let events = calendar.getEvents()
 
     events.forEach(function(ev) {
       ev.setName('party')
@@ -65,22 +64,22 @@ describe('Calendar test', () => {
   })
 
   it('Get events on current day', () => {
-    var events = calendar.getDayEvents()
+    let events = calendar.getDayEvents()
     expect(events.length).toBe(1)
   })
 
   it('Get events on current month', () => {
-    var events = calendar.getMonthEvents()
+    let events = calendar.getMonthEvents()
     expect(events.length).toBe(1)
   })
 
   it('Get events on current year', () => {
-    var events = calendar.getYearEvents()
+    let events = calendar.getYearEvents()
     expect(events.length).toBe(1)
   })
 
   it('Get events on another day', () => {
-    var events = calendar.getDayEvents(new Date('12/09/2017'))
+    let events = calendar.getDayEvents(new Date('12/09/2017'))
     expect(events.length).toBe(0)
 
     calendar.addEvent(
@@ -90,7 +89,7 @@ describe('Calendar test', () => {
   })
 
   it('Get events on another month', () => {
-    var events = calendar.getMonthEvents(new Date('12/10/2017'))
+    let events = calendar.getMonthEvents(new Date('12/10/2017'))
     expect(events.length).toBe(0)
 
     calendar.addEvent(
@@ -100,7 +99,7 @@ describe('Calendar test', () => {
   })
 
   it('Get events on another year', () => {
-    var events = calendar.getMonthEvents(new Date('12/10/2018'))
+    let events = calendar.getMonthEvents(new Date('12/10/2018'))
     expect(events.length).toBe(0)
 
     calendar.addEvent(
