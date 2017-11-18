@@ -1,3 +1,5 @@
 export default class Mike {
-  constructor() {}
+  constructor() {
+    // do some stuff
+  }
 }

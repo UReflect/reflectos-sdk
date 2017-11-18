@@ -1,5 +1,5 @@
 export default class Timer {
-  private callback_end: () => void
+  private callbackEnd: () => void
   private timeout: number
   private interval: number
   private seconds: number = 0
@@ -8,19 +8,19 @@ export default class Timer {
   private timeoutId: any
   private startDate: Date
 
-  constructor(timeout: number, interval: number, callback_end: () => void) {
+  constructor(timeout: number, interval: number, callbackEnd: () => void) {
     this.timeout = timeout
     this.interval = interval
-    this.callback_end = callback_end
+    this.callbackEnd = callbackEnd
   }
 
   start(callback: Function) {
-    if (this.running == false) {
+    if (this.running === false) {
       this.running = true
       this.startDate = new Date()
       clearTimeout(this.timeoutId)
       clearTimeout(this.timerId)
-      var self = this
+      let self = this
       self.timerId = setInterval(function() {
         callback()
       }, self.interval * 1000)
@@ -29,7 +29,7 @@ export default class Timer {
         clearInterval(self.timerId)
         self.seconds = 0
         self.running = false
-        self.callback_end()
+        self.callbackEnd()
       }, this.timeout * 1000 - this.seconds * 1000)
     }
     return -1
@@ -44,7 +44,7 @@ export default class Timer {
   }
 
   restart(callback: Function) {
-    if (this.running == true) {
+    if (this.running === true) {
       clearInterval(this.timerId)
       clearTimeout(this.timeoutId)
       this.seconds = 0
