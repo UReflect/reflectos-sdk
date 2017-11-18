@@ -6,16 +6,25 @@ export class Calendar {
   }
 
   getDayEvents(date: Date = new Date()) {
+    if (!(date instanceof Date)) {
+      throw new Error('date has to be a Date object')
+    }
+
     let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
-      if (date.getDay() === ev.getDate().getDay()) {
+      if (date.toDateString() === ev.getDate().toDateString()) {
         arrTmp.push(ev)
       }
     })
+
     return arrTmp
   }
 
   getMonthEvents(date: Date = new Date()) {
+    if (!(date instanceof Date)) {
+      throw new Error('date has to be a Date object')
+    }
+
     let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
       if (date.getMonth() === ev.getDate().getMonth()) {
@@ -26,6 +35,9 @@ export class Calendar {
   }
 
   getYearEvents(date: Date = new Date()) {
+    if (!(date instanceof Date)) {
+      throw new Error('date has to be a Date object')
+    }
     let arrTmp: Event[] = []
     this.events.forEach(function(ev) {
       if (date.getFullYear() === ev.getDate().getFullYear()) {

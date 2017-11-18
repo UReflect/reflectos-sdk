@@ -3,9 +3,9 @@ export default class Timer {
   private timeout: number
   private interval: number
   private seconds: number = 0
-  private timerId: number = 0
+  private timerId: any
   private running: boolean = false
-  private timeoutId: number = 0
+  private timeoutId: any
   private startDate: Date
 
   constructor(timeout: number, interval: number, callbackEnd: () => void) {

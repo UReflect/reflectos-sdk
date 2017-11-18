@@ -1,9 +1,9 @@
 import Timer from '../src/timer'
 
 describe('Timer test', () => {
-  set('callback_end', () => jest.fn())
-  set('callback_during', () => jest.fn())
-  set('timer', () => new Timer(60, 10, callback_end))
+  set('callbackEnd', () => jest.fn())
+  set('callbackDuring', () => jest.fn())
+  set('timer', () => new Timer(60, 10, callbackEnd))
 
   it('Timer is instantiable', () => {
     expect(timer).toBeInstanceOf(Timer)
@@ -11,11 +11,11 @@ describe('Timer test', () => {
 
   it('Timer can start', () => {
     jest.useFakeTimers()
-    timer.start(callback_during)
+    timer.start(callbackDuring)
     jest.runTimersToTime(120 * 1000)
 
-    expect(callback_during).toHaveBeenCalledTimes(6)
-    expect(callback_end).toHaveBeenCalled()
+    expect(callbackDuring).toHaveBeenCalledTimes(6)
+    expect(callbackEnd).toHaveBeenCalled()
   })
 
   it("Timer can't start twice", () => {

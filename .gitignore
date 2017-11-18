@@ -8,5 +8,3 @@ coverage
 dist
 compiled
 .awcache
-package-lock.json
-yarn.lock

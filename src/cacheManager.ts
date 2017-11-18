@@ -1,4 +1,4 @@
-let fs = require('fs')
+const fs = require('fs')
 
 export default class CacheManager {
   private cacheName: string
@@ -26,6 +26,7 @@ export default class CacheManager {
 
     let exists = fs.existsSync(self.filePath)
 
+    let obj: any
     if (exists) {
       let data = fs.readFileSync(self.filePath, 'utf8')
       let obj = JSON.parse(data) // now it an object
@@ -46,7 +47,7 @@ export default class CacheManager {
       throw new Error('Missing argument')
     }
 
-    let exists = fs.existsSync(this.filePath)
+    const exists = fs.existsSync(this.filePath)
 
     if (!exists) {
       throw new Error("File doesn't exist")
@@ -63,7 +64,7 @@ export default class CacheManager {
     if (!exists) {
       throw new Error("File doesn't exist")
     }
-    fs.unlink(this.filePath)
+    fs.unlinkSync(this.filePath)
     return true
   }
 }

@@ -1,6 +1,6 @@
-import CacheManager from '../src/CacheManager'
+import CacheManager from '../src/cacheManager'
 
-let fs = require('fs')
+const fs = require('fs')
 const path = '/tmp/UR/cache/Cache1-test'
 
 describe('CacheManager test', () => {
@@ -12,7 +12,7 @@ describe('CacheManager test', () => {
 
   it('throws without argument', () => {
     expect(() => {
-      let cacheManager = new CacheManager()
+      let cm = new CacheManager()
     }).toThrow()
   })
 
