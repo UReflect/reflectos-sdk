@@ -47,7 +47,7 @@ export default class CacheManager {
       throw new Error('Missing argument')
     }
 
-    let exists = fs.existsSync(this.filePath)
+    const exists = fs.existsSync(this.filePath)
 
     if (!exists) {
       throw new Error("File doesn't exist")

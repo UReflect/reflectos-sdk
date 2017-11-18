@@ -63,9 +63,25 @@ describe('Calendar test', () => {
     })
   })
 
+  it('Trying to create event with parameters', () => {
+    let ev = new Event('name')
+    let dt = new Date()
+
+    expect(ev.getName()).toBe('name')
+    expect(ev.getPlace()).toBe('')
+    expect(ev.getDescription()).toBe('')
+    expect(ev.getDate()).toEqual(dt)
+  })
+
   it('Get events on current day', () => {
     let events = calendar.getDayEvents()
     expect(events.length).toBe(1)
+  })
+
+  it('Get events on null day', () => {
+    expect(() => {
+      let events = calendar.getDayEvents(null)
+    }).toThrow()
   })
 
   it('Get events on current month', () => {
@@ -73,19 +89,31 @@ describe('Calendar test', () => {
     expect(events.length).toBe(1)
   })
 
+  it('Get events on null month', () => {
+    expect(() => {
+      let events = calendar.getMonthEvents(null)
+    }).toThrow()
+  })
+
   it('Get events on current year', () => {
     let events = calendar.getYearEvents()
     expect(events.length).toBe(1)
   })
 
+  it('Get events on null year', () => {
+    expect(() => {
+      let events = calendar.getYearEvents(null)
+    }).toThrow()
+  })
+
   it('Get events on another day', () => {
     let events = calendar.getDayEvents(new Date('12/09/2017'))
-    expect(events.length).toBe(1)
+    expect(events.length).toBe(0)
 
     calendar.addEvent(
       new Event('nouvel evenement', new Date('12/09/2017'), 'Paris')
     )
-    expect(calendar.getDayEvents(new Date('12/09/2017')).length).toBe(2)
+    expect(calendar.getDayEvents(new Date('12/09/2017')).length).toBe(1)
   })
 
   it('Get events on another month', () => {
