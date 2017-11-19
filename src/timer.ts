@@ -1,4 +1,4 @@
-export default class Timer {
+export class Timer {
   private callbackEnd: () => void
   private timeout: number
   private interval: number

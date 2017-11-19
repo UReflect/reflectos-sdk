@@ -1,4 +1,4 @@
-import CacheManager from '../src/cacheManager'
+import { CacheManager } from '../src/cacheManager'
 
 const fs = require('fs')
 const path = '/tmp/UR/cache/Cache1-test'

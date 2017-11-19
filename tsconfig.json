@@ -14,8 +14,7 @@
         "outDir": "compiled",
         "types": ["node"],
         "typeRoots": [
-          "node_modules/@types",
-          "src/declarations"
+          "node_modules/@types"
         ]
     },
     "include": [

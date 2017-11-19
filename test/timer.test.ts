@@ -1,4 +1,4 @@
-import Timer from '../src/timer'
+import { Timer } from '../src/timer'
 
 describe('Timer test', () => {
   set('callbackEnd', () => jest.fn())

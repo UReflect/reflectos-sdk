@@ -4,12 +4,12 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
 import multiEntry from 'rollup-plugin-multi-entry'
 
-import * as pkg from './package.json'
+import pkg from './package.json'
 
 const libraryName = 'reflectos-sdk'
 
 export default {
-  input: 'compiled/**.js',
+  input: 'compiled/**/*.js',
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
     { file: pkg.module, format: 'es' },

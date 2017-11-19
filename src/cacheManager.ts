@@ -1,6 +1,6 @@
-const fs = require('fs')
+import fs from 'fs'
 
-export default class CacheManager {
+export class CacheManager {
   private cacheName: string
   private filePath: string
 
