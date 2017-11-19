@@ -11,7 +11,9 @@ export namespace UR {
     width: number
     height: number
     abstract callMe(): void
-    public hello(): void
+    public hello(): void {
+      // nothing here
+    }
   }
 
   export function Component<C extends Constructor<{}>>(
