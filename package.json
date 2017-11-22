@@ -1,6 +1,6 @@
 {
   "name": "reflectos-sdk",
-  "version": "0.0.4-development",
+  "version": "0.1.1-dev",
   "description": "",
   "keywords": [],
   "main": "dist/reflectos-sdk.umd.js",
