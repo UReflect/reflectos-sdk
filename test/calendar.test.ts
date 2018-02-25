@@ -127,12 +127,12 @@ describe('Calendar test', () => {
   })
 
   it('Get events on another year', () => {
-    let events = calendar.getYearEvents(new Date('12/10/2018'))
+    let events = calendar.getYearEvents(new Date('12/10/2025'))
     expect(events.length).toBe(0)
 
     calendar.addEvent(
-      new Event('nouvel evenement', new Date('12/10/2018'), 'Paris')
+      new Event('nouvel evenement', new Date('12/10/2025'), 'Paris')
     )
-    expect(calendar.getYearEvents(new Date('12/10/2018')).length).toBe(1)
+    expect(calendar.getYearEvents(new Date('12/10/2025')).length).toBe(1)
   })
 })
