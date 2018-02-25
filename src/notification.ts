@@ -71,7 +71,7 @@ export interface InterfaceNotifications {
 export class SdkManager {
   static interface: InterfaceNotifications = {
     emitNotification(title: string, type: string, text: string): void {
-      console.log('.')
+      console.log('..')
     }
   }
 
